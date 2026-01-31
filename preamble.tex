@@ -1,9 +1,17 @@
 \documentclass{article}
+
+%% common utilities
 \usepackage{amsmath,amsthm,amssymb,comment,tikz-cd}
-\usepackage[T1]{fontenc}
-\usepackage[subtle]{savetrees}
-\usepackage{setspace}
-\usepackage{enumitem}
+\usepackage{mathabx,epsfig}
+
+
+\usepackage[T1]{fontenc} %% fonts
+
+\usepackage[subtle]{savetrees} %% saves space
+\usepackage{setspace} %% sets spacing
+\usepackage{enumitem} %% you can utilize this for adding labels to enums through [label=(\roman*)] 
+
+%%% general formatting
 \doublespacing
 \fontfamily{georgia}\selectfont
 
@@ -18,33 +26,47 @@
 %These lines get the width correct (1 inch is automatic on left...6.5 comes about then from 8.5 minus 1 minus 1)
 \setlength{\textwidth}{6.5in}
 \setlength{\hoffset}{0in}
+
 %These lines get the height correct (1 inch is automatic on top...9 comes about then from 11 minus 1 minus 1)
 \setlength{\textheight}{9in}
 \setlength{\voffset}{.5in}
 
+%%%%%%% Generally useful sets
 %%%%%%% Some sets 
-\newcommand{\Z}{{\mathbb Z}}
-\newcommand{\Q}{{\mathbb Q}}
-\newcommand{\R}{{\mathbb R}}
-\newcommand{\C}{{\mathbb C}}
+\newcommand{\Z}{{\mathbb Z}} % integers
+\newcommand{\Q}{{\mathbb Q}} % rationals
+\newcommand{\R}{{\mathbb R}} % reals
+\newcommand{\C}{{\mathbb C}} % complex
+\newcommand{\F}{{\mathbb F}} % field
+
+%%%%%%% Stuff I use for real analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%% the bigcup and bigcap for an index I 
+%%%%% I usually utilize J is a subset of I whenever there is a necessity with indexing subsets. 
+%%%%% in this case unionn and intersectt are picking elements from the J set.
+
 \newcommand{\union}{\bigcup_{\alpha \in I}}
+\newcommand{\unionn}{\bigcup_{\alpha \in J}}
 \newcommand{\intersect}{\bigcap_{\alpha \in I}}
+\newcommand{\intersectt}{\bigcap_{\alpha \in J}}
 
 
-%%%%%%%%%%% general linear group, homomorphism, orbit, stabilizer, special linear group, automorphisms, characteristic, order, the fancy R which I use for Ring.
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\Orb}{Orb}
-\DeclareMathOperator{\Stab}{Stab}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\Char}{Char}
-\DeclareMathOperator{\Ord}{Ord}
-\newcommand{\Ring}{\mathcal{R}}
+%%%%%% Stuff I use for abstract algebra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareMathOperator{\GL}{GL} % general linear group
+\DeclareMathOperator{\Hom}{Hom} % homomorphism
+\DeclareMathOperator{\Orb}{Orb} % orbit
+\DeclareMathOperator{\Stab}{Stab} % stabilizer
+\DeclareMathOperator{\SL}{SL} % Special linear group
+\DeclareMathOperator{\Aut}{Aut} % automorphism
+\DeclareMathOperator{\Char}{Char} % Ring characteristic
+\DeclareMathOperator{\Ord}{Ord} % Order
+\newcommand{\Ring}{\mathcal{R}} % Ring (just a fancy R)
+
+\def\acts{\mathrel{\reflectbox{$\righttoleftarrow$}}} %% acts on arrow
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \pagenumbering{gobble}
-\newcommand{\sol}[1]{\medskip {\it Solution}:~~#1 \vspace{.3cm}}
-
 
 %%%%%% END OF ANY RELEVANT PREAMBLE
