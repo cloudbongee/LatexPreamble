@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb,comment,tikz-cd}
+\usepackage[T1]{fontenc}
+\usepackage[subtle]{savetrees}
+\usepackage{setspace}
+\usepackage{enumitem}
+\doublespacing
+\fontfamily{georgia}\selectfont
+
+%These lines set all default values to 0
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\headsep}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\parindent}{0pt}
+
+%These lines get the width correct (1 inch is automatic on left...6.5 comes about then from 8.5 minus 1 minus 1)
+\setlength{\textwidth}{6.5in}
+\setlength{\hoffset}{0in}
+%These lines get the height correct (1 inch is automatic on top...9 comes about then from 11 minus 1 minus 1)
+\setlength{\textheight}{9in}
+\setlength{\voffset}{.5in}
+
+%%%%%%% Some sets 
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\C}{{\mathbb C}}
+
+%%%%%%%% the bigcup and bigcap for an index I 
+\newcommand{\union}{\bigcup_{\alpha \in I}}
+\newcommand{\intersect}{\bigcap_{\alpha \in I}}
+
+
+%%%%%%%%%%% general linear group, homomorphism, orbit, stabilizer, special linear group, automorphisms, characteristic, order, the fancy R which I use for Ring.
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Char}{Char}
+\DeclareMathOperator{\Ord}{Ord}
+\newcommand{\Ring}{\mathcal{R}}
+\pagenumbering{gobble}
+\newcommand{\sol}[1]{\medskip {\it Solution}:~~#1 \vspace{.3cm}}
+
+
+%%%%%% END OF ANY RELEVANT PREAMBLE
